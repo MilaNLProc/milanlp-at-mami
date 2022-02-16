@@ -1,9 +1,8 @@
 # Perceiver IO as Late Fusion of Unimodal Streams for Hateful Memes Detection
 
 **Abstract**
-```
-In this paper, we describe the system proposed by the MilaNLP team for the Multimedia Automatic Misogyny Identification (MAMI) challenge. We use Perceiver IO as a multimodal late fusion over unimodal streams to address both sub-task A and B. We build unimodal embeddings using Vision Transformer (image) and RoBERTa (text transcript). We enrich the input representation using face and demographic recognition, image captioning, and entities detection. The proposed approach outperforms unimodal and multimodal baselines.
-```
+
+*In this paper, we describe the system proposed by the MilaNLP team for the Multimedia Automatic Misogyny Identification (MAMI) challenge. We use Perceiver IO as a multimodal late fusion over unimodal streams to address both sub-task A and B. We build unimodal embeddings using Vision Transformer (image) and RoBERTa (text transcript). We enrich the input representation using face and demographic recognition, image captioning, and entities detection. The proposed approach outperforms unimodal and multimodal baselines.*
 
 ## Getting started
 
