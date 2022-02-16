@@ -3,3 +3,6 @@ datasets
 ftfy
 pillow
 accelerate
+
+# perceiver implementation by lucidrains
+git+https://github.com/lucidrains/perceiver-pytorch
