@@ -21,7 +21,7 @@ from transformers import (
     set_seed,
 )
 
-from baselines import text, mm
+from baselines import text, vision, mm
 from utils import compute_metrics, TEST_FILE, read_test_dataset
 
 
@@ -154,9 +154,11 @@ def parse_args():
     parser.add_argument("--logging_steps", type=int, default=50)
     parser.add_argument("--log_comet", action="store_true")
     parser.add_argument("--comet_tags", nargs="*")
+    parser.add_argument("--data_dir", type=str, default=None)
 
     # loss type
     parser.add_argument("--loss_type", type=str, default="focal")
+    parser.add_argument("--weighted_loss", action="store_true")
 
     # save strategy
     parser.add_argument("--save_best", action="store_true")
@@ -254,6 +256,12 @@ def main():
 
             if args.model_type == "text":
                 output = text.run_train(
+                    args,
+                    accelerator=accelerator,
+                    experiment=experiment,
+                )
+            elif args.model_type == "vision":
+                output = vision.run_train(
                     args,
                     accelerator=accelerator,
                     experiment=experiment,
