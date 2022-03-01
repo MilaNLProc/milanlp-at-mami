@@ -1,8 +1,8 @@
-# Perceiver IO as Late Fusion of Unimodal Streams for Hateful Memes Detection
+# MilaNLP at SemEval-2022 Task 5: Using Perceiver IO for Detecting Misogynous Memes with Text and Image Modalities
 
 **Abstract**
 
-*In this paper, we describe the system proposed by the MilaNLP team for the Multimedia Automatic Misogyny Identification (MAMI) challenge. We use Perceiver IO as a multimodal late fusion over unimodal streams to address both sub-task A and B. We build unimodal embeddings using Vision Transformer (image) and RoBERTa (text transcript). We enrich the input representation using face and demographic recognition, image captioning, and entities detection. The proposed approach outperforms unimodal and multimodal baselines.*
+*In this paper, we describe the system proposed by the MilaNLP team for the Multimedia Automatic Misogyny Identification (MAMI) challenge. We use Perceiver IO as a multimodal late fusion over unimodal streams to address both sub-tasks A and B. We build unimodal embeddings using Vision Transformer (image) and RoBERTa (text transcript). We enrich the input representation using face and demographic recognition, image captioning, and detection of adult content and web entities. To the best of our knowledge, this work is the first to use Perceiver IO combining text and image modalities. The proposed approach outperforms unimodal and multimodal baselines.*
 
 ## Getting started
 
@@ -66,6 +66,27 @@ Run cross validation using unimodal RoBERTa:
         --preprocessing_num_workers 4 \
         --early_stop_patience 3 \
         --save_best
+
+
+Run cross validation using unimodal Vision Transformer (ViT):
+
+    python runner.py \
+        --do_cv \
+        --model_type vision \
+        --data_dir ./data/images \
+        --output_dir results/task_A/cv/vit \
+        --vision_model google/vit-base-patch16-224-in21k \
+        --per_device_train_batch_size 16 \
+        --per_device_eval_batch_size 8 \
+        --weight_decay 0.01 \
+        --num_train_epochs 4 \
+        --num_warmup_steps 200 \
+        --learning_rate 1e-5 \
+        --seed 42 \
+        --preprocessing_num_workers 4 \
+        --device cuda \
+        --save_last \
+        --taskA 
 
 ### Final training
 
