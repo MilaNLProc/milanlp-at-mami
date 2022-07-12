@@ -1,8 +1,26 @@
 # MilaNLP at SemEval-2022 Task 5: Using Perceiver IO for Detecting Misogynous Memes with Text and Image Modalities
 
-**Abstract**
+**Paper**
 
-*In this paper, we describe the system proposed by the MilaNLP team for the Multimedia Automatic Misogyny Identification (MAMI) challenge. We use Perceiver IO as a multimodal late fusion over unimodal streams to address both sub-tasks A and B. We build unimodal embeddings using Vision Transformer (image) and RoBERTa (text transcript). We enrich the input representation using face and demographic recognition, image captioning, and detection of adult content and web entities. To the best of our knowledge, this work is the first to use Perceiver IO combining text and image modalities. The proposed approach outperforms unimodal and multimodal baselines.*
+[https://aclanthology.org/2022.semeval-1.90/](https://aclanthology.org/2022.semeval-1.90/)
+
+We introduce the system proposed by the MilaNLP team for the Multimedia Automatic Misogyny Identification (MAMI) challenge. We use Perceiver IO as a multimodal late fusion over unimodal streams to address both sub-tasks A and B. We build unimodal embeddings using Vision Transformer (image) and RoBERTa (text transcript). We enrich the input representation using face and demographic recognition, image captioning, and detection of adult content and web entities. To the best of our knowledge, this work is the first to use Perceiver IO combining text and image modalities. The proposed approach outperforms unimodal and multimodal baselines.
+
+```bibtex
+@inproceedings{attanasio-etal-2022-milanlp,
+    title = "{M}ila{NLP} at {S}em{E}val-2022 Task 5: Using Perceiver {IO} for Detecting Misogynous Memes with Text and Image Modalities",
+    author = "Attanasio, Giuseppe  and
+      Nozza, Debora  and
+      Bianchi, Federico",
+    booktitle = "Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)",
+    month = jul,
+    year = "2022",
+    address = "Seattle, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.semeval-1.90",
+    pages = "654--662",
+}
+```
 
 ## Getting started
 
